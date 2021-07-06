@@ -3,7 +3,7 @@
     <title>Html-Qrcode Demo</title>
 <body>
     <div id="qr-reader" style="width:500px"></div>
-    <div id="qr-reader-results"></div>
+    <div id="qr-reader-results">12345</div>
 </body>
  
 
@@ -41,6 +41,8 @@ var _;(()=>{"use strict";var A,e={d:(A,t)=>{for(var g in t)e.o(t,g)&&!e.o(A,g)&&
                 lastResult = decodedText;
                 // Handle on success condition with the decoded message.
                 console.log(`Scan result ${decodedText}`, decodedResult);
+                document.getElementById("qr-reader-results").innerHTML = decodedText;
+
             }
         }
 
